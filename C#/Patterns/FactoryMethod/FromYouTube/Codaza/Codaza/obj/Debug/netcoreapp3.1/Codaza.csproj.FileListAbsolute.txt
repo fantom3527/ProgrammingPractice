@@ -1,0 +1,14 @@
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\bin\Debug\netcoreapp3.1\Codaza.exe
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\bin\Debug\netcoreapp3.1\Codaza.deps.json
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\bin\Debug\netcoreapp3.1\Codaza.runtimeconfig.json
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\bin\Debug\netcoreapp3.1\Codaza.runtimeconfig.dev.json
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\bin\Debug\netcoreapp3.1\Codaza.dll
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\bin\Debug\netcoreapp3.1\Codaza.pdb
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.csproj.AssemblyReference.cache
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.AssemblyInfoInputs.cache
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.AssemblyInfo.cs
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.csproj.CoreCompileInputs.cache
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.dll
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.pdb
+C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\Patterns\FactoryMethod\FromYouTube\Codaza\Codaza\obj\Debug\netcoreapp3.1\Codaza.genruntimeconfig.cache
