@@ -1,32 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj": {}
+    "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj": {
+    "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj",
         "projectName": "Notes.WebApi",
-        "projectPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj",
-        "packagesPath": "C:\\Users\\antom\\.nuget\\packages\\",
-        "outputPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\obj\\",
+        "projectPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\Notes.WebApi.csproj",
+        "packagesPath": "C:\\Users\\ppi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\antom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ppi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

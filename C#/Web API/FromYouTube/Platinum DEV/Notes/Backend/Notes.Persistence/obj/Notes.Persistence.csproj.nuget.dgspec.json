@@ -1,40 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj": {}
+    "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj": {}
   },
   "projects": {
-    "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj": {
+    "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj",
+        "projectUniqueName": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj",
         "projectName": "Notes.Aplication",
-        "projectPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj",
-        "packagesPath": "C:\\Users\\antom\\.nuget\\packages\\",
-        "outputPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\obj\\",
+        "projectPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj",
+        "packagesPath": "C:\\Users\\ppi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\antom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ppi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj": {
-                "projectPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj"
+              "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj": {
+                "projectPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj"
               }
             }
           }
@@ -48,6 +49,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,29 +79,30 @@
         }
       }
     },
-    "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj": {
+    "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj",
         "projectName": "Notes.Domain",
-        "projectPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj",
-        "packagesPath": "C:\\Users\\antom\\.nuget\\packages\\",
-        "outputPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\obj\\",
+        "projectPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj",
+        "packagesPath": "C:\\Users\\ppi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\antom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ppi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -128,37 +140,41 @@
         }
       }
     },
-    "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj": {
+    "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj",
         "projectName": "Notes.Persistence",
-        "projectPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj",
-        "packagesPath": "C:\\Users\\antom\\.nuget\\packages\\",
-        "outputPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj",
+        "packagesPath": "C:\\Users\\ppi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\antom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ppi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj": {
-                "projectPath": "D:\\MyUsers\\MyDesctop\\Programming\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj"
+              "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj": {
+                "projectPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj"
+              },
+              "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj": {
+                "projectPath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Domain\\Notes.Domain.csproj"
               }
             }
           }
@@ -172,6 +188,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
