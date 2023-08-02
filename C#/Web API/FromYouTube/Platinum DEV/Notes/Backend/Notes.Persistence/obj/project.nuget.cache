@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6MYs/EGv3xVJcHCkSk+azUULauP89CHXZLTxJemMw0hJtKBfv37cbf8pqWrrQJykAIsi63SlYk4GmIV32wpchA==",
+  "dgSpecHash": "/Y0WFDhuyR7ourSZJrIoEH6rHFcAjOgxCOFWyuXnxSDZSbXlOKxTVA0495cZX32YXdH9wLVi5tDtjKI48uO6jA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Persistence\\Notes.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ppi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\ppi\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\ppi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ppi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ppi\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.9\\microsoft.data.sqlite.core.7.0.9.nupkg.sha512",
     "C:\\Users\\ppi\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.9\\microsoft.entityframeworkcore.7.0.9.nupkg.sha512",

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "WgtyyVDe5L5RaYtOp+HxQIWhOpygy8r2HDS6eNzdk/k80U1HUq9vGyLnA0/OLXVsKI34JbuxUbDhn/pGKI6Z0A==",
+  "dgSpecHash": "jzsobnp9QVmHqNQWHYzOew+tkwsn1PmxPBDJUBrmarM5WvmOW5a73n8Y/8T8cZSHIF1aRiCnHsGHToGjH28cHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ppi\\Desktop\\Что-то прекрасное\\Подготовка\\ProgrammingPractice\\C#\\Web API\\FromYouTube\\Platinum DEV\\Notes\\Backend\\Notes.Aplication\\Notes.Aplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ppi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\ppi\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\ppi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ppi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ppi\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.9\\microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
     "C:\\Users\\ppi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.9\\microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",
