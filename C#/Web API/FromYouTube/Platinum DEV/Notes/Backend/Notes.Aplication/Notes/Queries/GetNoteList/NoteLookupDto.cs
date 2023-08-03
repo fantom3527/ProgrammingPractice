@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Notes.Aplication.Notes.Queries.GetNoteList
 {
-    internal class NoteLookupDto : IMapWith<Note>
+    public class NoteLookupDto : IMapWith<Note>
     {
         public Guid Id { get; set; }
         public string Title { get; set; }

@@ -77,6 +77,7 @@ StyleCopReport.xml
 *.ilk
 *.meta
 *.obj
+**/*.obj
 *.iobj
 *.pch
 *.pdb
@@ -341,6 +342,8 @@ ASALocalRun/
 
 # MSBuild Binary and Structured Log
 *.binlog
+*.bin/
+**/*.bin/
 
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
