@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PeoplesCities.Persistence
 {
-    public class PeoplesCitiesDbContext : DbContext, IUsersDbContext, ICitiesDbContext
+    public class PeoplesCitiesDbContext : DbContext, IPeoplesCitiesDbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<City> Cities { get; set; }
@@ -20,7 +20,7 @@ namespace PeoplesCities.Persistence
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfiguration(new UserConfiguration);
+            builder.ApplyConfiguration(new UserConfiguration());
             base.OnModelCreating(builder);
         }
     }

@@ -7,9 +7,9 @@ namespace PeoplesCities.Application.Features.Users.Commands.DeleteUser
 {
     public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, Unit>
     {
-        private readonly IUsersDbContext _dbcontext;
+        private readonly IPeoplesCitiesDbContext _dbcontext;
 
-        public DeleteUserCommandHandler(IUsersDbContext dbcontext) => 
+        public DeleteUserCommandHandler(IPeoplesCitiesDbContext dbcontext) => 
             _dbcontext = dbcontext;
 
         public async Task<Unit> Handle(DeleteUserCommand requst, CancellationToken cancellationToken)

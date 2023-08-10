@@ -12,9 +12,9 @@ namespace PeoplesCities.Application.Features.Cities.Command.CreateCity
 {
     internal class CreateCityCommandHandler : IRequestHandler<CreateCityCommand, Guid>
     {
-        private readonly ICitiesDbContext _dbContext;
+        private readonly IPeoplesCitiesDbContext _dbContext;
 
-        public CreateCityCommandHandler(ICitiesDbContext dbContext) =>
+        public CreateCityCommandHandler(IPeoplesCitiesDbContext dbContext) =>
             _dbContext = dbContext;
 
         public async Task<Guid> Handle(CreateCityCommand requst, CancellationToken cancellationToken)

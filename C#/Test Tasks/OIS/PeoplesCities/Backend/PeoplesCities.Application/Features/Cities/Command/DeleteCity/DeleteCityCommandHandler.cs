@@ -12,9 +12,9 @@ namespace PeoplesCities.Application.Features.Cities.Command.DeleteCity
 {
     internal class DeleteCityCommandHandler : IRequestHandler<DeleteCityCommand, Unit>
     {
-        private readonly ICitiesDbContext _dbcontext;
+        private readonly IPeoplesCitiesDbContext _dbcontext;
 
-        public DeleteCityCommandHandler(ICitiesDbContext dbcontext) => 
+        public DeleteCityCommandHandler(IPeoplesCitiesDbContext dbcontext) => 
             _dbcontext = dbcontext;
 
         public async Task<Unit> Handle(DeleteCityCommand requst, CancellationToken cancellationToken)

@@ -13,9 +13,9 @@ namespace PeoplesCities.Application.Features.Users.Commands.UpdateUser
 {
     internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
     {
-        private readonly IUsersDbContext _dbcontext;
+        private readonly IPeoplesCitiesDbContext _dbcontext;
 
-        public UpdateUserCommandHandler(IUsersDbContext dbcontext) => 
+        public UpdateUserCommandHandler(IPeoplesCitiesDbContext dbcontext) => 
             _dbcontext = dbcontext;
 
         public async Task<Unit> Handle(UpdateUserCommand request, CancellationToken cancellationToken)

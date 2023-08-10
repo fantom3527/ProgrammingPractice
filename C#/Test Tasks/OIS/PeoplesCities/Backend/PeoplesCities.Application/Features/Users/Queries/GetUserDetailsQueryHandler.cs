@@ -14,10 +14,10 @@ namespace PeoplesCities.Application.Features.Users.Queries
 {
     public class GetUserDetailsQueryHandler : IRequestHandler<GetUserDetailsQuery, UserDetailsVm>
     {
-        private readonly IUsersDbContext _dbContext;
+        private readonly IPeoplesCitiesDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public GetUserDetailsQueryHandler(IUsersDbContext dbContext, IMapper mapper) => 
+        public GetUserDetailsQueryHandler(IPeoplesCitiesDbContext dbContext, IMapper mapper) => 
             (dbContext, mapper) = (dbContext, mapper);
 
         public async Task<UserDetailsVm> Handle(GetUserDetailsQuery requst, CancellationToken cancellationToken)

@@ -11,9 +11,9 @@ namespace PeoplesCities.Application.Features.Users.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
     {
-        private readonly IUsersDbContext _dbContext;
+        private readonly IPeoplesCitiesDbContext _dbContext;
 
-        public CreateUserCommandHandler(IUsersDbContext dbContext) => 
+        public CreateUserCommandHandler(IPeoplesCitiesDbContext dbContext) => 
             _dbContext = dbContext;
 
         public async Task<Guid> Handle(CreateUserCommand requst, CancellationToken cancellationToken)
