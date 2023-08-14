@@ -1,9 +1,4 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeoplesCities.Application.Features.Cities.Command.DeleteCity
 {
@@ -11,7 +6,7 @@ namespace PeoplesCities.Application.Features.Cities.Command.DeleteCity
     {
         public DeleteCityCommandValidator()
         {
-            RuleFor(createNoteCommand => createNoteCommand.Id).NotEqual(Guid.Empty);
+            RuleFor(createCityCommand => createCityCommand.Id).NotEqual(Guid.Empty);
         }
     }
 }

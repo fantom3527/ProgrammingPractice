@@ -1,16 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Configuration;
-using System.Reflection;
+﻿using System.Reflection;
 using PeoplesCities.Application;
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Persistence;
+using PeoplesCities.WebApi.Middleware;
 
-namespace Notes.WebApi
+namespace PeoplesCities.WebApi
 {
     public class Startup
     {
@@ -40,7 +35,14 @@ namespace Notes.WebApi
                     policy.AllowAnyOrigin();
                 });
             });
-        }
+
+            services.AddSwaggerGen(config =>
+            {
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                config.IncludeXmlComments(xmlPath);
+            });
+        }   
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -49,6 +51,14 @@ namespace Notes.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            // Задаем интерфейс сваггера по умолчанию.
+            app.UseSwaggerUI(config =>
+            {
+                config.RoutePrefix =string.Empty;
+                config.SwaggerEndpoint("swagger/v1/swagger.json", "PeoplesCities API");
+            });
+            app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");

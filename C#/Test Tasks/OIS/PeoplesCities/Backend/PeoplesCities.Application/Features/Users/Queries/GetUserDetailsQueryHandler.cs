@@ -4,11 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using PeoplesCities.Application.Common.Exception;
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeoplesCities.Application.Features.Users.Queries
 {
@@ -22,7 +17,7 @@ namespace PeoplesCities.Application.Features.Users.Queries
 
         public async Task<UserDetailsVm> Handle(GetUserDetailsQuery requst, CancellationToken cancellationToken)
         {
-            var entity = await _dbContext.Users.FirstOrDefaultAsync(note => note.Id == requst.Id, cancellationToken);
+            var entity = await _dbContext.Users.FirstOrDefaultAsync(user => user.Id == requst.Id, cancellationToken);
 
             if (entity == null || entity.Id != requst.Id)
             {

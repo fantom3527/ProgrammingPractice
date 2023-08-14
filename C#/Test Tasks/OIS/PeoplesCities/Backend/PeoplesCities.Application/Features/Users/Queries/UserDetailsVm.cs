@@ -1,11 +1,6 @@
 ﻿using AutoMapper;
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeoplesCities.Application.Features.Users.Queries
 {

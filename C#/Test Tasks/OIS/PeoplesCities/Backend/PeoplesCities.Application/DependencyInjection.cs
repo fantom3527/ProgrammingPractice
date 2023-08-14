@@ -2,7 +2,6 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using PeoplesCities.Application.Common.Behaviors;
-using PeoplesCities.Application.Interfaces;
 using System.Reflection;
 
 namespace PeoplesCities.Application

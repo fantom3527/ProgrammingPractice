@@ -1,10 +1,6 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
 using PeoplesCities.Persistence;
 
-namespace Notes.WebApi
+namespace PeoplesCities.WebApi
 {
     public class Program
     {

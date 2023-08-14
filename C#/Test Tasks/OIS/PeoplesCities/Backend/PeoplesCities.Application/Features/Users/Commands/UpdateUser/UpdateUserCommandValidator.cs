@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using PeoplesCities.Application.Features.Users.Commands.CreateUser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,10 @@ namespace PeoplesCities.Application.Features.Users.Commands.UpdateUser
     {
         public UpdateUserCommandValidator()
         {
-            RuleFor(createNoteCommand => createNoteCommand.User.Id).NotEqual(Guid.Empty);
-            RuleFor(createNoteCommand => createNoteCommand.User.CityId).NotEqual(Guid.Empty);
-            RuleFor(createNoteCommand => createNoteCommand.User.Name).NotEmpty().MaximumLength(250);
-            RuleFor(createNoteCommand => createNoteCommand.User.Email).NotEmpty().MaximumLength(250);
+            RuleFor(createUserCommand => createUserCommand.User.Id).NotEqual(Guid.Empty);
+            RuleFor(createUserCommand => createUserCommand.User.CityId).NotEqual(Guid.Empty);
+            RuleFor(createUserCommand => createUserCommand.User.Name).NotEmpty().MaximumLength(250);
+            RuleFor(createUserCommand => createUserCommand.User.Email).NotEmpty().MaximumLength(250);
         }
     }
 }

@@ -5,9 +5,11 @@ using PeoplesCities.Application.Features.Cities.Command.DeleteCity;
 using PeoplesCities.Application.Features.Cities.Command.UpdateCity;
 using PeoplesCities.Application.Features.Cities.Queries;
 using PeoplesCities.Domain;
+using PeoplesCities.WebApi.Models;
 
 namespace PeoplesCities.WebApi.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class CityController : BaseController
     {
@@ -15,7 +17,18 @@ namespace PeoplesCities.WebApi.Controllers
 
         public CityController(IMapper mapper) => _mapper = mapper;
 
+        /// <summary>
+        /// Gets City by id.
+        /// </summary>
+        /// <param name="id">City id (guid).</param>
+        /// <remarks>
+        /// Sample request:
+        /// GET /city/13360799-8908-4449-9CA9-64A3AA5AEA8C
+        /// </remarks>
+        /// <returns>Returns CityDetailsVm.</returns>
+        /// <response code="200">Success</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<CityDetailsVm>> Get(Guid id)
         {
             var query = new GetCityDetailsQuery()
@@ -27,26 +40,65 @@ namespace PeoplesCities.WebApi.Controllers
             return Ok(vm);
         }
 
+        /// <summary>
+        /// Creates the city.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// POST /city
+        /// {
+        ///     name: "city name"
+        ///     description: "city description"
+        /// }
+        /// </remarks>
+        /// <param name="cityDto">CityDto object.</param>
+        /// <returns>Returns id (guid).</returns>
+        /// <response code="200">Success</response>
         [HttpPost]
-        public async Task<ActionResult<Guid>> Create([FromBody] City city)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<Guid>> Create([FromBody] CityDto cityDto)
         {
-            var command = _mapper.Map<CreateCityCommand>(city);
-            var noteId = await Mediator.Send(command);
+            var command = _mapper.Map<CreateCityCommand>(cityDto);
+            var cityId = await Mediator.Send(command);
 
-            return Ok(noteId);
+            return Ok(cityId);
         }
 
+        /// <summary>
+        /// Updates the city.
+        /// </summary>
+        /// Sample request:
+        /// PUT /city
+        /// {
+        ///     name: "city name"
+        ///     description: "city description"
+        /// }
+        /// </remarks>
+        /// <param name="cityDto">CityDto object.</param>
+        /// <returns>Return NoContent.</returns>
+        /// <response code="200">Success</response>
         [HttpPut]
-        public async Task<ActionResult> Update([FromBody] City city)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult> Update([FromBody] CityDto cityDto)
         {
-            var command = _mapper.Map<UpdateCityCommand>(city);
+            var command = _mapper.Map<UpdateCityCommand>(cityDto);
             await Mediator.Send(command);
 
             return NoContent();
         }
 
-
+        /// <summary>
+        /// Deletes the city by id.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// DELETE /city/88DEB432-062F-43DE-8DCD-8B6EF79073D3
+        /// </remarks>
+        /// <param name="id">City id (guid).</param>
+        /// <returns>Returns NoContent.</returns>
+        /// <response code="200">Success</response>
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Delete(Guid id)
         {
             var command = new DeleteCityCommand

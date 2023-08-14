@@ -2,11 +2,6 @@
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Domain;
 using PeoplesCities.Persistence.EntityTypeConfigurations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeoplesCities.Persistence
 {

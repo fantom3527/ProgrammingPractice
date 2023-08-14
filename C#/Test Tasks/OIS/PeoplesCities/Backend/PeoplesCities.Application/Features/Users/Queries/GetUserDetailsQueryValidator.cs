@@ -1,9 +1,4 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeoplesCities.Application.Features.Users.Queries
 {
@@ -11,7 +6,7 @@ namespace PeoplesCities.Application.Features.Users.Queries
     {
         public GetUserDetailsQueryValidator()
         {
-            RuleFor(createNoteCommand => createNoteCommand.Id).NotEqual(Guid.Empty);
+            RuleFor(createUserCommand => createUserCommand.Id).NotEqual(Guid.Empty);
         }
     }
 }

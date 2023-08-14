@@ -5,9 +5,11 @@ using PeoplesCities.Application.Features.Users.Commands.DeleteUser;
 using PeoplesCities.Application.Features.Users.Commands.UpdateUser;
 using PeoplesCities.Application.Features.Users.Queries;
 using PeoplesCities.Domain;
+using PeoplesCities.WebApi.Models;
 
 namespace PeoplesCities.WebApi.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class UserController : BaseController
     {
@@ -15,7 +17,19 @@ namespace PeoplesCities.WebApi.Controllers
 
         public UserController(IMapper mapper) => _mapper = mapper;
 
+
+        /// <summary>
+        /// Gets user by id.
+        /// </summary>
+        /// <param name="id">User id (guid).</param>
+        /// <remarks>
+        /// Sample request:
+        /// GET /user/13360799-8908-4449-9CA9-64A3AA5AEA8C
+        /// </remarks>
+        /// <returns>Returns UserDetailsVm.</returns>
+        /// <response code="200">Success</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<UserDetailsVm>> Get(Guid id)
         {
             var query = new GetUserDetailsQuery()
@@ -27,26 +41,67 @@ namespace PeoplesCities.WebApi.Controllers
             return Ok(vm);
         }
 
+        /// <summary>
+        /// Creates the user.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// POST /user
+        /// {
+        ///     cityid: "user's cityid"
+        ///     name:   "user name"
+        ///     Email:  "user description"
+        /// }
+        /// </remarks>
+        /// <param name="userDto">UserDto object.</param>
+        /// <returns>Returns id (guid).</returns>
+        /// <response code="200">Success</response>
         [HttpPost]
-        public async Task<ActionResult<Guid>> Create([FromBody] User user)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<Guid>> Create([FromBody] UserDto userDto)
         {
-            var command = _mapper.Map<CreateUserCommand>(user);
+            var command = _mapper.Map<CreateUserCommand>(userDto);
             var userId = await Mediator.Send(command);
 
             return Ok(userId);
         }
 
+        /// <summary>
+        /// Updates the user.
+        /// </summary>
+        /// Sample request:
+        /// PUT /user
+        /// {
+        ///     Id:          "user id"  
+        ///     name:        "user name"
+        ///     description: "user description"
+        /// }
+        /// </remarks>
+        /// <param name="userDto">UserDto object.</param>
+        /// <returns>Return NoContent.</returns>
+        /// <response code="200">Success</response>
         [HttpPut]
-        public async Task<ActionResult> Update([FromBody] User user)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult> Update([FromBody] UserDto userDto)
         {
-            var command = _mapper.Map<UpdateUserCommand>(user);
+            var command = _mapper.Map<UpdateUserCommand>(userDto);
             await Mediator.Send(command);
 
             return NoContent();
         }
 
-
+        /// <summary>
+        /// Deletes the user by id.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// DELETE /user/88DEB432-062F-43DE-8DCD-8B6EF79073D3
+        /// </remarks>
+        /// <param name="id">user id (guid).</param>
+        /// <returns>Returns NoContent.</returns>
+        /// <response code="200">Success</response>
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Delete(Guid id)
         {
             var command = new DeleteUserCommand

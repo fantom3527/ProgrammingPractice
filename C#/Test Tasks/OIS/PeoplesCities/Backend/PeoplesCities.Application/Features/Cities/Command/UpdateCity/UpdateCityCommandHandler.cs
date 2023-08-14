@@ -3,11 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using PeoplesCities.Application.Common.Exception;
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeoplesCities.Application.Features.Cities.Command.UpdateCity
 {
@@ -20,7 +15,7 @@ namespace PeoplesCities.Application.Features.Cities.Command.UpdateCity
 
         public async Task<Unit> Handle(UpdateCityCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _dbcontext.Cities.FirstOrDefaultAsync(note => note.Id == request.City.Id, cancellationToken);
+            var entity = await _dbcontext.Cities.FirstOrDefaultAsync(city => city.Id == request.City.Id, cancellationToken);
 
             if (entity == null || entity.Id != request.City.Id)
             {

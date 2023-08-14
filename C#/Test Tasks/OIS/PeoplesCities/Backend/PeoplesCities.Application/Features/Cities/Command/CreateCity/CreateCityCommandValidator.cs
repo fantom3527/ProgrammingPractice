@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FluentValidation;
-using System.Threading.Tasks;
+﻿using FluentValidation;
 
 namespace PeoplesCities.Application.Features.Cities.Command.CreateCity
 {
@@ -11,9 +6,8 @@ namespace PeoplesCities.Application.Features.Cities.Command.CreateCity
     {
         public CreateCityCommandValidator()
         {
-            RuleFor(createNoteCommand => createNoteCommand.City.Id).NotEqual(Guid.Empty);
-            RuleFor(createNoteCommand => createNoteCommand.City.Name).NotEmpty().MaximumLength(250);
-            RuleFor(createNoteCommand => createNoteCommand.City.Description).NotEmpty().MaximumLength(250);
+            RuleFor(createCityCommand => createCityCommand.City.Name).NotEmpty().MaximumLength(250);
+            RuleFor(createCityCommand => createCityCommand.City.Description).NotEmpty().MaximumLength(250);
         }
     }
 }
