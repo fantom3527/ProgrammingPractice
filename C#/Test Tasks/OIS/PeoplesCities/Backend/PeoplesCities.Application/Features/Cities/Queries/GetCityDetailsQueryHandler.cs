@@ -12,7 +12,7 @@ namespace PeoplesCities.Application.Features.Cities.Queries
         private readonly IPeoplesCitiesDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public GetCityDetailsQueryHandler(IPeoplesCitiesDbContext dbContext, IMapper mapper) => (dbContext, mapper) = (dbContext, mapper);
+        public GetCityDetailsQueryHandler(IPeoplesCitiesDbContext dbContext, IMapper mapper) => (_dbContext, _mapper) = (dbContext, mapper);
 
         public async Task<CityDetailsVm> Handle(GetCityDetailsQuery requst, CancellationToken cancellationToken)
         {

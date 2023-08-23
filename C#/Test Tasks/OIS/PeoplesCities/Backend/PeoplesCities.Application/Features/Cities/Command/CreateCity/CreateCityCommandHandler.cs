@@ -13,17 +13,27 @@ namespace PeoplesCities.Application.Features.Cities.Command.CreateCity
 
         public async Task<Guid> Handle(CreateCityCommand requst, CancellationToken cancellationToken)
         {
-            var city = new City()
+            //TODO: переделать на логирование
+            try
             {
-                Id = requst.City.Id,
-                Name = requst.City.Name,
-                Description = requst.City.Description,
-            };
+                var city = new City()
+                {
+                    Id = requst.City.Id,
+                    Name = requst.City.Name,
+                    Description = requst.City.Description,
+                };
 
-            await _dbContext.Cities.AddAsync(city, cancellationToken);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                await _dbContext.Cities.AddAsync(city, cancellationToken);
+                await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return city.Id;
+                return city.Id;
+            }
+            catch (Exception ex)
+            {
+                // Зарегистрировать внутреннее исключение
+                Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
+                throw;
+            }
         }
     }
 }

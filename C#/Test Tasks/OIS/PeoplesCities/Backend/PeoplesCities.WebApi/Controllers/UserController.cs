@@ -5,7 +5,7 @@ using PeoplesCities.Application.Features.Users.Commands.DeleteUser;
 using PeoplesCities.Application.Features.Users.Commands.UpdateUser;
 using PeoplesCities.Application.Features.Users.Queries;
 using PeoplesCities.Domain;
-using PeoplesCities.WebApi.Models;
+using PeoplesCities.WebApi.Models.UserDto;
 
 namespace PeoplesCities.WebApi.Controllers
 {
@@ -58,7 +58,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <response code="200">Success</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<Guid>> Create([FromBody] UserDto userDto)
+        public async Task<ActionResult<Guid>> Create([FromBody] CreateUserDto userDto)
         {
             var command = _mapper.Map<CreateUserCommand>(userDto);
             var userId = await Mediator.Send(command);
@@ -69,6 +69,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <summary>
         /// Updates the user.
         /// </summary>
+        /// <remarks>
         /// Sample request:
         /// PUT /user
         /// {
@@ -77,14 +78,14 @@ namespace PeoplesCities.WebApi.Controllers
         ///     description: "user description"
         /// }
         /// </remarks>
-        /// <param name="userDto">UserDto object.</param>
+        /// <param name="updateUserDto">UpdateUserDto object.</param>
         /// <returns>Return NoContent.</returns>
         /// <response code="200">Success</response>
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult> Update([FromBody] UserDto userDto)
+        public async Task<ActionResult> Update([FromBody] UpdateUserDto updateUserDto)
         {
-            var command = _mapper.Map<UpdateUserCommand>(userDto);
+            var command = _mapper.Map<UpdateUserCommand>(updateUserDto);
             await Mediator.Send(command);
 
             return NoContent();

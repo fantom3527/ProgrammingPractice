@@ -3,9 +3,9 @@ using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Application.Features.Cities.Command.CreateCity;
 using PeoplesCities.Application.Features.Users.Commands.CreateUser;
 
-namespace PeoplesCities.WebApi.Models
+namespace PeoplesCities.WebApi.Models.UserDto
 {
-    public class UserDto : IMapWith<CreateUserCommand>
+    public class CreateUserDto : IMapWith<CreateUserCommand>
     {
         public Guid CityId { get; set; }
         public string Name { get; set; }
@@ -13,7 +13,7 @@ namespace PeoplesCities.WebApi.Models
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<UserDto, CreateUserCommand>()
+            profile.CreateMap<CreateUserDto, CreateUserCommand>()
                 .ForPath(userCommand => userCommand.User.CityId,
                     opt => opt.MapFrom(userDto => userDto.CityId))
                 .ForPath(userCommand => userCommand.User.Name,

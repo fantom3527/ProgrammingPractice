@@ -5,6 +5,7 @@ using PeoplesCities.Persistence.EntityTypeConfigurations;
 
 namespace PeoplesCities.Persistence
 {
+    //TODO: Изменить название PeoplesCitiesDbContext на AppDbContext
     public class PeoplesCitiesDbContext : DbContext, IPeoplesCitiesDbContext
     {
         public DbSet<User> Users { get; set; }
@@ -16,6 +17,7 @@ namespace PeoplesCities.Persistence
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new CityConfiguration());
             base.OnModelCreating(builder);
         }
     }

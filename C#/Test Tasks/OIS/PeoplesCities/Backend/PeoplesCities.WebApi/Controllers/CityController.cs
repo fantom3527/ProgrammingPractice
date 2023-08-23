@@ -5,7 +5,7 @@ using PeoplesCities.Application.Features.Cities.Command.DeleteCity;
 using PeoplesCities.Application.Features.Cities.Command.UpdateCity;
 using PeoplesCities.Application.Features.Cities.Queries;
 using PeoplesCities.Domain;
-using PeoplesCities.WebApi.Models;
+using PeoplesCities.WebApi.Models.CityDto;
 
 namespace PeoplesCities.WebApi.Controllers
 {
@@ -56,7 +56,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <response code="200">Success</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<Guid>> Create([FromBody] CityDto cityDto)
+        public async Task<ActionResult<Guid>> Create([FromBody] CreateCityDto cityDto)
         {
             var command = _mapper.Map<CreateCityCommand>(cityDto);
             var cityId = await Mediator.Send(command);
@@ -68,20 +68,21 @@ namespace PeoplesCities.WebApi.Controllers
         /// Updates the city.
         /// </summary>
         /// Sample request:
+        /// <remarks>
         /// PUT /city
         /// {
         ///     name: "city name"
         ///     description: "city description"
         /// }
         /// </remarks>
-        /// <param name="cityDto">CityDto object.</param>
+        /// <param name="updateCityDto">UpdateCityDto object.</param>
         /// <returns>Return NoContent.</returns>
         /// <response code="200">Success</response>
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult> Update([FromBody] CityDto cityDto)
+        public async Task<ActionResult> Update([FromBody] UpdateCityDto updateCityDto)
         {
-            var command = _mapper.Map<UpdateCityCommand>(cityDto);
+            var command = _mapper.Map<UpdateCityCommand>(updateCityDto);
             await Mediator.Send(command);
 
             return NoContent();

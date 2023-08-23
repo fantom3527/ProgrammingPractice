@@ -13,17 +13,27 @@ namespace PeoplesCities.Application.Features.Users.Commands.CreateUser
 
         public async Task<Guid> Handle(CreateUserCommand requst, CancellationToken cancellationToken)
         {
-            var user = new User()
+            try
             {
-                Id = requst.User.Id,
-                Name = requst.User.Name,
-                Email = requst.User.Email,
-            };
+                var user = new User()
+                {
+                    Id = requst.User.Id,
+                    CityId = requst.User.CityId,
+                    Name = requst.User.Name,
+                    Email = requst.User.Email,
+                };
 
-            await _dbContext.Users.AddAsync(user, cancellationToken);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                await _dbContext.Users.AddAsync(user, cancellationToken);
+                await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return user.Id;
+                return user.Id;
+            }
+            catch (Exception ex)
+            {
+                // Зарегистрировать внутреннее исключение
+                Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
+                throw;
+            }
         }
     }
 }

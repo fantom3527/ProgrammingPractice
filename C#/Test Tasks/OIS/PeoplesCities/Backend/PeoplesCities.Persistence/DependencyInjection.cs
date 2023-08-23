@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PeoplesCities.Application.Interfaces;
+using PeoplesCities.Application.Sevices;
 
 namespace PeoplesCities.Persistence
 {
@@ -16,11 +17,18 @@ namespace PeoplesCities.Persistence
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration["DbConnection"];
+            string wireMockUrl = configuration.GetSection("WireMockSettings")["WireMockUrl"];
+            bool isSQLiteProDbProvifer = Convert.ToBoolean(configuration["IsSQLiteProDbProvifer"]);
+
             services.AddDbContext<PeoplesCitiesDbContext>(options =>
             {
-                options.UseSqlite(connectionString);
+                if (isSQLiteProDbProvifer)  
+                    options.UseSqlite(connectionString);
+                else
+                    options.UseNpgsql(connectionString);
             });
             services.AddScoped<IPeoplesCitiesDbContext>(provider => provider.GetService<PeoplesCitiesDbContext>());
+            services.AddSingleton<IWireMockService>(provider => new WireMockService(wireMockUrl));
 
             return services;
         }

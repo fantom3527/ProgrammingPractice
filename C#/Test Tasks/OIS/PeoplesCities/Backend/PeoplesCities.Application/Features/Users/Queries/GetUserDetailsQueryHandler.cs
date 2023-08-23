@@ -13,7 +13,7 @@ namespace PeoplesCities.Application.Features.Users.Queries
         private readonly IMapper _mapper;
 
         public GetUserDetailsQueryHandler(IPeoplesCitiesDbContext dbContext, IMapper mapper) => 
-            (dbContext, mapper) = (dbContext, mapper);
+            (_dbContext, _mapper) = (dbContext, mapper);
 
         public async Task<UserDetailsVm> Handle(GetUserDetailsQuery requst, CancellationToken cancellationToken)
         {

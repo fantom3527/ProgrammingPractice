@@ -23,6 +23,7 @@ namespace PeoplesCities.WebApi
 
             services.AddApplication();
             services.AddPersistence(Configuration);
+           // services.AddTests(Configuration);
             services.AddControllers();
 
             // Для теста предоставим доступ для всех

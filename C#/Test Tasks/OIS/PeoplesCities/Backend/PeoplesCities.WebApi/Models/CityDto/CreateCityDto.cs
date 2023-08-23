@@ -2,17 +2,16 @@
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Application.Features.Cities.Command.CreateCity;
 
-namespace PeoplesCities.WebApi.Models
+namespace PeoplesCities.WebApi.Models.CityDto
 {
-    public class CityDto : IMapWith<CreateCityCommand>
+    public class CreateCityDto : IMapWith<CreateCityCommand>
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<CityDto, CreateCityCommand>()
+            profile.CreateMap<CreateCityDto, CreateCityCommand>()
                 .ForPath(cityCommand => cityCommand.City.Name,
                     opt => opt.MapFrom(cityDto => cityDto.Name))
                 .ForPath(cityCommand => cityCommand.City.Description,

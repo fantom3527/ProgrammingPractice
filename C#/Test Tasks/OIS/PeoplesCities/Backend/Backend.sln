@@ -9,13 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D2537B19-AE1E-4445-BAF8-1989064F5799}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeoplesCities.Application", "PeoplesCities.Application\PeoplesCities.Application.csproj", "{D8FEF693-3294-48AE-833C-D0E0D1994A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeoplesCities.Application", "PeoplesCities.Application\PeoplesCities.Application.csproj", "{D8FEF693-3294-48AE-833C-D0E0D1994A82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeoplesCities.Domain", "PeoplesCities.Domain\PeoplesCities.Domain.csproj", "{38621563-3AAC-4610-949E-B3759D034F14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeoplesCities.Domain", "PeoplesCities.Domain\PeoplesCities.Domain.csproj", "{38621563-3AAC-4610-949E-B3759D034F14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeoplesCities.Persistence", "PeoplesCities.Persistence\PeoplesCities.Persistence.csproj", "{2AE5CD21-8A0E-4EE2-ACE3-B8D1E7EDB631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeoplesCities.Persistence", "PeoplesCities.Persistence\PeoplesCities.Persistence.csproj", "{2AE5CD21-8A0E-4EE2-ACE3-B8D1E7EDB631}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeoplesCities.WebApi", "PeoplesCities.WebApi\PeoplesCities.WebApi.csproj", "{D42B69DB-5572-44CA-9D3A-471F1A658D31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeoplesCities.WebApi", "PeoplesCities.WebApi\PeoplesCities.WebApi.csproj", "{D42B69DB-5572-44CA-9D3A-471F1A658D31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{977A8D5A-EDA4-4EB8-B04B-177CEC9BB101}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

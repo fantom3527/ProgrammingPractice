@@ -27,6 +27,7 @@ namespace PeoplesCities.Application.Features.Users.Commands.UpdateUser
                 throw new NotFoundException(nameof(User), request.User.Id);
             }
 
+            entity.CityId = request.User.CityId;
             entity.Name = request.User.Name;
             entity.Email = request.User.Email;
 

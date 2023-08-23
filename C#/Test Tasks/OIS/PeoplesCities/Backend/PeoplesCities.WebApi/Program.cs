@@ -1,5 +1,6 @@
 using PeoplesCities.Persistence;
 
+
 namespace PeoplesCities.WebApi
 {
     public class Program
@@ -14,11 +15,13 @@ namespace PeoplesCities.WebApi
                 try
                 {
                     var context = serviceProvider.GetRequiredService<PeoplesCitiesDbContext>();
+                    //WeatherStub.ConfigureStub();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception exception)
                 {
-
+                    Console.WriteLine("Ошибка при инициализации базы данных: " + exception);
+                    Console.WriteLine("Подробности об ошибке: " + exception.InnerException);
                 }
             }
 
@@ -31,5 +34,9 @@ namespace PeoplesCities.WebApi
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+            //    .ConfigureAppConfiguration((hostingContext, config) =>
+            //     {
+            //config.AddJsonFile("appsettings.json", optional: true);
+            //      });
     }
 }

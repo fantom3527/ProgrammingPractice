@@ -14,8 +14,8 @@ namespace PeoplesCities.Application.Features.Users.Commands.UpdateUser
         {
             RuleFor(createUserCommand => createUserCommand.User.Id).NotEqual(Guid.Empty);
             RuleFor(createUserCommand => createUserCommand.User.CityId).NotEqual(Guid.Empty);
-            RuleFor(createUserCommand => createUserCommand.User.Name).NotEmpty().MaximumLength(250);
-            RuleFor(createUserCommand => createUserCommand.User.Email).NotEmpty().MaximumLength(250);
+            RuleFor(createUserCommand => createUserCommand.User.Name).NotEmpty().MaximumLength(80);
+            RuleFor(createUserCommand => createUserCommand.User.Email).MaximumLength(80);
         }
     }
 }
