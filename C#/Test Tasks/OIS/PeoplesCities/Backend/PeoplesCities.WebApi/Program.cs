@@ -20,8 +20,9 @@ namespace PeoplesCities.WebApi
                 }
                 catch (Exception exception)
                 {
-                    Console.WriteLine("Ошибка при инициализации базы данных: " + exception);
-                    Console.WriteLine("Подробности об ошибке: " + exception.InnerException);
+                    //TODO: РїРѕРїСЂР°РІРёС‚СЊ, С‡С‚Рѕ-С‚Рѕ СЃ РєРѕРґРёСЂРѕРІРєР°РјРё.
+                    Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: " + exception);
+                    Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: " + exception.InnerException);
                 }
             }
 
