@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace PeoplesCities.Application.Features.Users.Commands.UpdateUser
 {
-    internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
+    public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
     {
         private readonly IPeoplesCitiesDbContext _dbcontext;
 

@@ -5,7 +5,7 @@ using PeoplesCities.Domain;
 
 namespace PeoplesCities.Application.Features.Cities.Command.DeleteCity
 {
-    internal class DeleteCityCommandHandler : IRequestHandler<DeleteCityCommand, Unit>
+    public class DeleteCityCommandHandler : IRequestHandler<DeleteCityCommand, Unit>
     {
         private readonly IPeoplesCitiesDbContext _dbcontext;
 

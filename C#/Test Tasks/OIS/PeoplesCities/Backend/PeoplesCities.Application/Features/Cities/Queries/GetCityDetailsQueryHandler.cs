@@ -7,7 +7,7 @@ using PeoplesCities.Domain;
 
 namespace PeoplesCities.Application.Features.Cities.Queries
 {
-    internal class GetCityDetailsQueryHandler : IRequestHandler<GetCityDetailsQuery, CityDetailsVm>
+    public class GetCityDetailsQueryHandler : IRequestHandler<GetCityDetailsQuery, CityDetailsVm>
     {
         private readonly IPeoplesCitiesDbContext _dbContext;
         private readonly IMapper _mapper;

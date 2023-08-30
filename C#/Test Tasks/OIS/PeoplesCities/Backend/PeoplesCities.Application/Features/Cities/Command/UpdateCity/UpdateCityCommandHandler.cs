@@ -6,7 +6,7 @@ using PeoplesCities.Domain;
 
 namespace PeoplesCities.Application.Features.Cities.Command.UpdateCity
 {
-    internal class UpdateCityCommandHandler : IRequestHandler<UpdateCityCommand, Unit>
+    public class UpdateCityCommandHandler : IRequestHandler<UpdateCityCommand, Unit>
     {
         private readonly IPeoplesCitiesDbContext _dbcontext;
 

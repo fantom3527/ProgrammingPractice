@@ -43,6 +43,8 @@ services:
         restart: unless-stopped
         networks:
             - peoples-cities-dev
+        depends_on:
+            - postgres_db
 
     wiremock:
         container_name: wiremock
@@ -50,7 +52,7 @@ services:
         ports:
             - "808:8080"      
         volumes:  
-            - ./WireMock:/home/wiremock
+            - ./Docker/WireMock:/home/wiremock
         restart: unless-stopped
         networks:
             - peoples-cities-dev

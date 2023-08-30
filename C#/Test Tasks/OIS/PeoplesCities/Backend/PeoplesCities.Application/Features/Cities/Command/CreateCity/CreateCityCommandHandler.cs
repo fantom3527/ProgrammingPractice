@@ -4,7 +4,7 @@ using PeoplesCities.Domain;
 
 namespace PeoplesCities.Application.Features.Cities.Command.CreateCity
 {
-    internal class CreateCityCommandHandler : IRequestHandler<CreateCityCommand, Guid>
+    public class CreateCityCommandHandler : IRequestHandler<CreateCityCommand, Guid>
     {
         private readonly IPeoplesCitiesDbContext _dbContext;
 
