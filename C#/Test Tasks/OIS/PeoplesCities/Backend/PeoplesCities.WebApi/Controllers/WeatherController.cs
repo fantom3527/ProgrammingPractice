@@ -5,8 +5,9 @@ using PeoplesCities.Application.Features.Weathers.Queries;
 
 namespace PeoplesCities.WebApi.Controllers
 {
+    [ApiVersionNeutral]
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/{version:apiVersion}/[controller]")]
     public class WeatherController : BaseController
     {
         /// <summary>

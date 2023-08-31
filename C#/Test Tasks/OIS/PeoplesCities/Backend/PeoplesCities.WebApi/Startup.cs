@@ -1,10 +1,13 @@
 ﻿using System.Reflection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.Options;
 using PeoplesCities.Application;
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Persistence;
 using PeoplesCities.WebApi.Middleware;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace PeoplesCities.WebApi
 {
@@ -37,13 +40,6 @@ namespace PeoplesCities.WebApi
                 });
             });
 
-            services.AddSwaggerGen(config =>
-            {
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                config.IncludeXmlComments(xmlPath);
-            });
-
             services.AddAuthentication(config =>
             {
                 config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -54,9 +50,18 @@ namespace PeoplesCities.WebApi
                    options.Audience = "PeoplesCitiesWebAPI";
                    options.RequireHttpsMetadata = false;
                });
+            services.AddVersionedApiExplorer(options => options.GroupNameFormat = "'v'VVV");
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+            services.AddSwaggerGen(config =>
+            {
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                config.IncludeXmlComments(xmlPath);
+            });
+            services.AddApiVersioning();
         }   
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
             if (env.IsDevelopment())
             {
@@ -67,8 +72,13 @@ namespace PeoplesCities.WebApi
             // Задаем интерфейс сваггера по умолчанию.
             app.UseSwaggerUI(config =>
             {
-                config.RoutePrefix =string.Empty;
-                config.SwaggerEndpoint("swagger/v1/swagger.json", "PeoplesCities API");
+                foreach (var description in provider.ApiVersionDescriptions)
+                {
+                    config.SwaggerEndpoint(
+                        $"/swagger/{description.GroupName}/swagger.json",
+                        description.GroupName.ToUpperInvariant());
+                    config.RoutePrefix = string.Empty;
+                }
             });
             app.UseCustomExceptionHandler();
             app.UseRouting();
@@ -76,6 +86,7 @@ namespace PeoplesCities.WebApi
             app.UseCors("AllowAll");
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseApiVersioning();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
