@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PeoplesCities.Application.Features.Cities.Command.CreateCity;
 using PeoplesCities.Application.Features.Cities.Command.DeleteCity;
@@ -28,6 +29,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns CityDetailsVm.</returns>
         /// <response code="200">Success</response>
         [HttpGet("{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<CityDetailsVm>> Get(Guid id)
         {
@@ -55,6 +57,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns id (guid).</returns>
         /// <response code="200">Success</response>
         [HttpPost]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<Guid>> Create([FromBody] CreateCityDto cityDto)
         {
@@ -79,6 +82,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Return NoContent.</returns>
         /// <response code="200">Success</response>
         [HttpPut]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Update([FromBody] UpdateCityDto updateCityDto)
         {
@@ -99,6 +103,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns NoContent.</returns>
         /// <response code="200">Success</response>
         [HttpDelete("{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Delete(Guid id)
         {

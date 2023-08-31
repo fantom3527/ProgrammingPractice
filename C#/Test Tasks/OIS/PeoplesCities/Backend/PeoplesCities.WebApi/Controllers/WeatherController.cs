@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PeoplesCities.Application.Features.Weathers.Queries;
 
@@ -19,6 +20,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns WeatherDetailsVm.</returns>
         /// <response code="200">Success</response>
         [HttpGet("{cityId}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<WeatherDetailsVm>> GetWeather(Guid cityId)
         {

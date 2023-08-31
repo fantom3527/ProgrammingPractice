@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using PeoplesCities.Application;
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Application.Interfaces;
@@ -23,7 +24,6 @@ namespace PeoplesCities.WebApi
 
             services.AddApplication();
             services.AddPersistence(Configuration);
-           // services.AddTests(Configuration);
             services.AddControllers();
 
             // Для теста предоставим доступ для всех
@@ -43,6 +43,17 @@ namespace PeoplesCities.WebApi
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 config.IncludeXmlComments(xmlPath);
             });
+
+            services.AddAuthentication(config =>
+            {
+                config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer("Bearer", options =>
+               {
+                   options.Authority = "https://localhost:7088/";
+                   options.Audience = "PeoplesCitiesWebAPI";
+                   options.RequireHttpsMetadata = false;
+               });
         }   
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -63,7 +74,8 @@ namespace PeoplesCities.WebApi
             app.UseRouting();
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
-
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

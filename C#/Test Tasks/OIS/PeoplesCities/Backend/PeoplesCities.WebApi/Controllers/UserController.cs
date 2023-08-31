@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PeoplesCities.Application.Features.Users.Commands.CreateUser;
 using PeoplesCities.Application.Features.Users.Commands.DeleteUser;
@@ -29,6 +30,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns UserDetailsVm.</returns>
         /// <response code="200">Success</response>
         [HttpGet("{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<UserDetailsVm>> Get(Guid id)
         {
@@ -57,6 +59,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns id (guid).</returns>
         /// <response code="200">Success</response>
         [HttpPost]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<Guid>> Create([FromBody] CreateUserDto userDto)
         {
@@ -82,6 +85,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Return NoContent.</returns>
         /// <response code="200">Success</response>
         [HttpPut]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Update([FromBody] UpdateUserDto updateUserDto)
         {
@@ -102,6 +106,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns NoContent.</returns>
         /// <response code="200">Success</response>
         [HttpDelete("{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Delete(Guid id)
         {
