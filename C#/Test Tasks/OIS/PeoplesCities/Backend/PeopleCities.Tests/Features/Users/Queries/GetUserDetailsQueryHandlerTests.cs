@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using PeopleCities.Tests.Common;
-using PeoplesCities.Application.Features.Users.Queries;
+using PeoplesCities.Application.Features.Users.Queries.GetUserDetails;
 using PeoplesCities.Persistence;
 using Shouldly;
 

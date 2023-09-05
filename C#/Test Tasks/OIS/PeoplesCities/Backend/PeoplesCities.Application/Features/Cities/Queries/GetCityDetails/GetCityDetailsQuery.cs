@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace PeoplesCities.Application.Features.Cities.Queries
+namespace PeoplesCities.Application.Features.Cities.Queries.GetCityDetails
 {
     public class GetCityDetailsQuery : IRequest<CityDetailsVm>
     {

@@ -5,14 +5,14 @@ using PeoplesCities.Application.Common.Exception;
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Domain;
 
-namespace PeoplesCities.Application.Features.Users.Queries
+namespace PeoplesCities.Application.Features.Users.Queries.GetUserDetails
 {
     public class GetUserDetailsQueryHandler : IRequestHandler<GetUserDetailsQuery, UserDetailsVm>
     {
         private readonly IPeoplesCitiesDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public GetUserDetailsQueryHandler(IPeoplesCitiesDbContext dbContext, IMapper mapper) => 
+        public GetUserDetailsQueryHandler(IPeoplesCitiesDbContext dbContext, IMapper mapper) =>
             (_dbContext, _mapper) = (dbContext, mapper);
 
         public async Task<UserDetailsVm> Handle(GetUserDetailsQuery requst, CancellationToken cancellationToken)

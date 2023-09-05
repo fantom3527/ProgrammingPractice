@@ -5,7 +5,7 @@ using PeoplesCities.Application.Common.Exception;
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Domain;
 
-namespace PeoplesCities.Application.Features.Cities.Queries
+namespace PeoplesCities.Application.Features.Cities.Queries.GetCityDetails
 {
     public class GetCityDetailsQueryHandler : IRequestHandler<GetCityDetailsQuery, CityDetailsVm>
     {

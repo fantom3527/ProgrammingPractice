@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 
-namespace PeoplesCities.Application.Features.Cities.Queries
+namespace PeoplesCities.Application.Features.Users.Queries.GetUserDetails
 {
-    public class GetUserDetailsQueryValidator : AbstractValidator<GetCityDetailsQuery>
+    public class GetUserDetailsQueryValidator : AbstractValidator<GetUserDetailsQuery>
     {
         public GetUserDetailsQueryValidator()
         {

@@ -2,7 +2,7 @@
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Domain;
 
-namespace PeoplesCities.Application.Features.Cities.Queries
+namespace PeoplesCities.Application.Features.Cities.Queries.GetCityDetails
 {
     public class CityDetailsVm : IMapWith<City>
     {

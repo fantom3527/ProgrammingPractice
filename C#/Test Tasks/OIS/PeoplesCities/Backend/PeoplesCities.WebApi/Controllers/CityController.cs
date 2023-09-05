@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PeoplesCities.Application.Common.Query;
 using PeoplesCities.Application.Features.Cities.Command.CreateCity;
 using PeoplesCities.Application.Features.Cities.Command.DeleteCity;
 using PeoplesCities.Application.Features.Cities.Command.UpdateCity;
-using PeoplesCities.Application.Features.Cities.Queries;
-using PeoplesCities.Domain;
+using PeoplesCities.Application.Features.Cities.Queries.GetCityDetails;
+using PeoplesCities.Application.Features.Cities.Queries.GetCityList;
 using PeoplesCities.WebApi.Models.CityDto;
 
 namespace PeoplesCities.WebApi.Controllers
@@ -19,6 +20,26 @@ namespace PeoplesCities.WebApi.Controllers
         private readonly IMapper _mapper;
 
         public CityController(IMapper mapper) => _mapper = mapper;
+
+        /// <summary>
+        /// Gets all City.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET /city/
+        /// </remarks>
+        /// <returns>Returns CityListVm.</returns>
+        /// <response code="200">Success</response>
+        [HttpGet]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<CityListVm>> GetAll()
+        {
+            var query = new GetEmptyQuery();
+            var vm = await Mediator.Send(query);
+
+            return Ok(vm);
+        }
 
         /// <summary>
         /// Gets City by id.

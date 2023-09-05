@@ -2,9 +2,9 @@
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Domain;
 
-namespace PeoplesCities.Application.Features.Users.Queries
+namespace PeoplesCities.Application.Features.Users.Queries.GetUserList
 {
-    public class UserDetailsVm : IMapWith<User>
+    public class UserLookupDto : IMapWith<User>
     {
         public Guid Id { get; set; }
         public Guid CityId { get; set; }
@@ -13,7 +13,7 @@ namespace PeoplesCities.Application.Features.Users.Queries
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<User, UserDetailsVm>()
+            profile.CreateMap<User, UserLookupDto>()
                 .ForMember(userVm => userVm.Id,
                     opt => opt.MapFrom(user => user.Id))
                 .ForMember(userVm => userVm.CityId,

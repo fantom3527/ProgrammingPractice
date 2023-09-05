@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using PeopleCities.Tests.Common;
 using PeoplesCities.Application.Features.Cities.Queries;
+using PeoplesCities.Application.Features.Cities.Queries.GetCityDetails;
 using PeoplesCities.Persistence;
 using Shouldly;
 

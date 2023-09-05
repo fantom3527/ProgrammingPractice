@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using PeoplesCities.Application.Features.Users.Commands.CreateUser;
 using PeoplesCities.Application.Features.Users.Commands.DeleteUser;
 using PeoplesCities.Application.Features.Users.Commands.UpdateUser;
-using PeoplesCities.Application.Features.Users.Queries;
-using PeoplesCities.Domain;
+using PeoplesCities.Application.Features.Users.Queries.GetUserDetails;
+using PeoplesCities.Application.Features.Users.Queries.GetUserList;
 using PeoplesCities.WebApi.Models.UserDto;
 
 namespace PeoplesCities.WebApi.Controllers
@@ -19,6 +19,30 @@ namespace PeoplesCities.WebApi.Controllers
 
         public UserController(IMapper mapper) => _mapper = mapper;
 
+        /// <summary>
+        /// Gets user by cityId.
+        /// </summary>
+        /// <param name="cityId">City id (guid).</param>
+        /// <remarks>
+        /// Sample request:
+        /// GET /user/f278d99c-2876-4bfd-b6b9-1b901bed4267
+        /// </remarks>
+        /// <returns>Returns UserListVm.</returns>
+        /// <response code="200">Success</response>
+        [HttpGet("by-city-id/{cityId}")]
+        [ActionName("GetByCity")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<UserListVm>> GetByCity(Guid cityId)
+        {
+            var query = new GetUserListQuery()
+            {
+                CityId = cityId
+            };
+            var vm = await Mediator.Send(query);
+
+            return Ok(vm);
+        }
 
         /// <summary>
         /// Gets user by id.
@@ -31,7 +55,8 @@ namespace PeoplesCities.WebApi.Controllers
         /// <returns>Returns UserDetailsVm.</returns>
         /// <response code="200">Success</response>
         [HttpGet("{id}")]
-        [Authorize]
+        [ActionName("Get")]
+        //[Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<UserDetailsVm>> Get(Guid id)
         {
