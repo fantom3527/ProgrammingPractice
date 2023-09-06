@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IdentityServer4.Services;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
-using PeoplesCities.Identity.Models;
+﻿using PeoplesCities.Identity.Models;
 
 namespace PeoplesCities.Identity.Controllers
 {
@@ -64,7 +56,7 @@ namespace PeoplesCities.Identity.Controllers
             {
                 ReturnUrl = returnUrl
             };
-            return View(returnUrl);
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -77,7 +69,9 @@ namespace PeoplesCities.Identity.Controllers
 
             var user = new AppUser
             {
-                UserName = viewModel.Username
+                UserName = viewModel.Username,
+                FirstName = viewModel.Username,
+                LastName = viewModel.Username
             };
 
             var result = await _userManager.CreateAsync(user, viewModel.Password);

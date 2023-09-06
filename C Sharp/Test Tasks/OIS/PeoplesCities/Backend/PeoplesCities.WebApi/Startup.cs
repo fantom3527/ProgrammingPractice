@@ -90,10 +90,6 @@ namespace PeoplesCities.WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                //endpoints.MapControllerRoute(
-                //            name: "default",
-                //            pattern: "api/{version:apiVersion}/{controller}/{action}/{cityId?}",
-                //            defaults: new { action = "Index" });
             });
         }
     }
