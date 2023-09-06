@@ -1,4 +1,7 @@
-﻿using PeoplesCities.Identity.Data;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
+using PeoplesCities.Identity.Data;
 using PeoplesCities.Identity.Models;
 
 namespace PeoplesCities.Identity
@@ -63,10 +66,7 @@ namespace PeoplesCities.Identity
             app.UseIdentityServer();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Identity server started!");
-                });
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }

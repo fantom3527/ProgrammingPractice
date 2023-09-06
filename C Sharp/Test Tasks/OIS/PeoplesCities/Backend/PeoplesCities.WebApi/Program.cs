@@ -1,5 +1,5 @@
 using PeoplesCities.Persistence;
-
+using Serilog;
 
 namespace PeoplesCities.WebApi
 {
@@ -7,6 +7,10 @@ namespace PeoplesCities.WebApi
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration().MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Information)
+                                      .WriteTo.File("LogFiles/PeoplesCities-.txt", rollingInterval: RollingInterval.Day)
+                                      .CreateLogger();
+
             var host = CreateHostBuilder(args).Build();
 
             using (var scope = host.Services.CreateScope())
@@ -20,9 +24,7 @@ namespace PeoplesCities.WebApi
                 }
                 catch (Exception exception)
                 {
-                    //TODO: поправить, что-то с кодировками.
-                    Console.WriteLine("������ ��� ������������� ���� ������: " + exception);
-                    Console.WriteLine("����������� �� ������: " + exception.InnerException);
+                    Log.Fatal(exception, "An error occurred while app initialization");
                 }
             }
 

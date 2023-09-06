@@ -7,6 +7,7 @@ using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Application.Interfaces;
 using PeoplesCities.Persistence;
 using PeoplesCities.WebApi.Middleware;
+using PeoplesCities.WebApi.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace PeoplesCities.WebApi
@@ -59,6 +60,8 @@ namespace PeoplesCities.WebApi
                 config.IncludeXmlComments(xmlPath);
             });
             services.AddApiVersioning();
+            services.AddSingleton<ICurrentUserService, CurrentUserService>();
+            services.AddHttpContextAccessor();
         }   
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)

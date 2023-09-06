@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PeoplesCities.Identity.Models;
-using PeoplesCities.Identity.Models;
 
 namespace PeoplesCities.Identity.Data
 {
