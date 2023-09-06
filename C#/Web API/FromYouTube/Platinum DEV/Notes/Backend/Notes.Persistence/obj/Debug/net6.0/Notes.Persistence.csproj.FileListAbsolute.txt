@@ -1,5 +1,0 @@
-C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\C#\Web API\FromYouTube\Platinum DEV\Notes\Backend\Notes.Persistence\obj\Debug\net6.0\Notes.Persistence.csproj.AssemblyReference.cache
-C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\C#\Web API\FromYouTube\Platinum DEV\Notes\Backend\Notes.Persistence\obj\Debug\net6.0\Notes.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\C#\Web API\FromYouTube\Platinum DEV\Notes\Backend\Notes.Persistence\obj\Debug\net6.0\Notes.Persistence.AssemblyInfoInputs.cache
-C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\C#\Web API\FromYouTube\Platinum DEV\Notes\Backend\Notes.Persistence\obj\Debug\net6.0\Notes.Persistence.AssemblyInfo.cs
-C:\Users\ppi\Desktop\Что-то прекрасное\Подготовка\ProgrammingPractice\C#\Web API\FromYouTube\Platinum DEV\Notes\Backend\Notes.Persistence\obj\Debug\net6.0\Notes.Persistence.csproj.CoreCompileInputs.cache
