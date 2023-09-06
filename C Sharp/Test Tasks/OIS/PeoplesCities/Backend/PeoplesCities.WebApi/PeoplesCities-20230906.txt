@@ -1,4 +1,0 @@
-2023-09-06 14:01:32.304 +07:00 [INF] Notes Request: GetEmptyQuery "3fd41c28-9807-4118-b1a9-cce2386aa381" {"$type":"GetEmptyQuery"}
-2023-09-06 14:01:32.905 +07:00 [INF] Notes Request: GetEmptyQuery "3fd41c28-9807-4118-b1a9-cce2386aa381" {"$type":"GetEmptyQuery"}
-2023-09-06 14:01:52.412 +07:00 [INF] Notes Request: CreateCityCommand "3fd41c28-9807-4118-b1a9-cce2386aa381" {"City":{"Id":"00000000-0000-0000-0000-000000000000","Name":"Novosib","Description":"","Ts":"0001-01-01T00:00:00.0000000","Users":null,"$type":"City"},"$type":"CreateCityCommand"}
-2023-09-06 14:01:52.830 +07:00 [INF] Notes Request: GetEmptyQuery "3fd41c28-9807-4118-b1a9-cce2386aa381" {"$type":"GetEmptyQuery"}

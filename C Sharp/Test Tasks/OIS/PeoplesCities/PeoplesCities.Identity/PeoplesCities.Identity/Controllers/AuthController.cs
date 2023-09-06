@@ -1,7 +1,4 @@
-﻿using IdentityServer4.Services;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using PeoplesCities.Identity.Models;
+﻿using PeoplesCities.Identity.Models;
 
 namespace PeoplesCities.Identity.Controllers
 {
