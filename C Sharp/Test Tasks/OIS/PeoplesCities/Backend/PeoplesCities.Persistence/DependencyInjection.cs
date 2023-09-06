@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PeoplesCities.Application.Interfaces;
-using PeoplesCities.Application.Sevices;
 
 namespace PeoplesCities.Persistence
 {
@@ -28,7 +27,6 @@ namespace PeoplesCities.Persistence
                     options.UseNpgsql(connectionString);
             });
             services.AddScoped<IPeoplesCitiesDbContext>(provider => provider.GetService<PeoplesCitiesDbContext>());
-            services.AddSingleton<IWireMockService>(provider => new WireMockService(wireMockUrl));
 
             return services;
         }

@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using PeoplesCities.Application;
 using PeoplesCities.Application.Common.Mapping;
 using PeoplesCities.Application.Interfaces;
+using PeoplesCities.Application.Sevices;
 using PeoplesCities.Persistence;
 using PeoplesCities.WebApi.Middleware;
 using PeoplesCities.WebApi.Services;
@@ -61,6 +62,7 @@ namespace PeoplesCities.WebApi
             });
             services.AddApiVersioning();
             services.AddSingleton<ICurrentUserService, CurrentUserService>();
+            services.AddSingleton<IWireMockService>(provider => new WireMockService(Configuration.GetSection("WireMockSettings")["WireMockUrl"]));
             services.AddHttpContextAccessor();
         }   
 

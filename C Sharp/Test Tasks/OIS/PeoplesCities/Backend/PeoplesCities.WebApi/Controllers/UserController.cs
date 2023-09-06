@@ -56,7 +56,7 @@ namespace PeoplesCities.WebApi.Controllers
         /// <response code="200">Success</response>
         [HttpGet("{id}")]
         [ActionName("Get")]
-        //[Authorize]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<UserDetailsVm>> Get(Guid id)
         {

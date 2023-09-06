@@ -1,4 +1,4 @@
-﻿namespace PeoplesCities.Application.Sevices
+﻿namespace PeoplesCities.Application.Interfaces
 {
     public interface IWireMockService
     {

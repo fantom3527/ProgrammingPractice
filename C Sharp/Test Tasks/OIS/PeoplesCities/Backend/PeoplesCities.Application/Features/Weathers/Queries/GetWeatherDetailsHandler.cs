@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Newtonsoft.Json;
-using PeoplesCities.Application.Sevices;
+using PeoplesCities.Application.Interfaces;
 
 namespace PeoplesCities.Application.Features.Weathers.Queries
 {
